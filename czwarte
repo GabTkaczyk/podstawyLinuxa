@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+
+printf "kalkulator\npodaj 2 liczby:"
+read a
+read b
+printf "wybierz dzialanie:\n+ - / *"
+read opcja
+
+if [[ $opcja == "+" ]]; then
+	odp=`expr $a + $b`
+	echo "$odp"
+fi
+if [[ $opcja == "-" ]]; then
+	odp=`expr $a - $b`
+	echo "$odp"
+fi
+if [[ $opcja == "/" ]]; then
+	odp=`expr $a / $b`
+	echo "$odp"
+fi
+if [[ $opcja == "*" ]]; then
+	odp=$(($a*$b))
+	echo "$odp"
+	echo "mnozenie"
+fi
