@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+haslo='abcd'
+echo "podaj haslo"
+read passwd
+
+if [ $passwd != $haslo ]; then
+	echo "haslo niepoprawne, pozostala 1 proba"
+	read passwd
+	if [ $passwd != $haslo ]; then
+		exit 0
+	fi
+fi
+
+ls -al #al zeby bylo w oddzielnych liniach
+#bo mozna tez -a
+
+
+	
